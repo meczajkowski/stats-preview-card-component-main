@@ -1,0 +1,116 @@
+:root {
+  /* colors */
+  --color-bg: hsl(233, 47%, 7%);
+  --color-card: hsl(244, 38%, 16%);
+  --color-accent: hsl(277, 64%, 61%);
+  --color-text-light: hsl(0, 0%, 100%);
+  --color-text: hsl(0, 0%, 75%);
+  --color-text-dark: hsl(0, 0%, 60%);
+
+  /* fonts */
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Lexend Deca", sans-serif;
+  --font-size-s: 13px;
+  --font-size-m: 15px;
+  --font-size-l: 25px;
+  --font-size-xl: 30px;
+
+  --rounding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-m);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.card {
+  max-width: 326px;
+  margin: 20px;
+  overflow-x: hidden;
+  text-align: center;
+  background-color: var(--color-card);
+  border-radius: var(--rounding);
+}
+
+/* card image content */
+.card__image-container {
+  position: relative;
+  height: 240px;
+  width: 100%;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__image-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-accent);
+  opacity: 0.5;
+}
+
+/* card text content */
+.card__content-container {
+  padding: 40px 20px;
+}
+
+.card__heading {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  line-height: 32px;
+  color: var(--color-text-light);
+}
+
+.card__heading--accent {
+  color: var(--color-accent);
+}
+
+.card__description {
+  padding: 16px;
+  line-height: 25px;
+}
+
+/* card stats */
+.card__list {
+  list-style-type: none;
+  padding-top: 25px;
+}
+
+.card__list-item {
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-s);
+  color: var(--color-text-dark);
+  margin-bottom: 28px;
+}
+
+.card__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.card__list-item--big {
+  color: var(--color-text-light);
+  display: block;
+  margin-bottom: 5px;
+  font-size: var(--font-size-l);
+  font-family: var(--font-primary);
+  font-weight: 700;
+}
