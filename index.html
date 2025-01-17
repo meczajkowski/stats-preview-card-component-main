@@ -10,35 +10,52 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Stats preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <section>
-        <img src="./images/image-header-mobile.jpg" alt="header" />
+    <main class="card">
+      <section class="card__image-container">
+        <img
+          class="card__image"
+          src="./images/image-header-mobile.jpg"
+          alt="header"
+        />
       </section>
-      <section>
-        <h1>Get <span>insights</span> that help your business grow.</h1>
-        <p>
-          Discover the benefits of data analytics and make better decisions
-          regarding revenue, customer experience, and overall efficiency.
-        </p>
-      </section>
-      <section>
-        <ul>
-          <li>
-            <h2>10k+</h2>
-            <p>companies</p>
-          </li>
-          <li>
-            <h2>314</h2>
-            <p>templates</p>
-          </li>
-          <li>
-            <h2>12m+</h2>
-            <p>queries</p>
-          </li>
-        </ul>
+      <section class="card__content-container">
+        <section class="card__text-container">
+          <h1 class="card__heading">
+            Get
+            <span class="card__heading card__heading--accent">insights</span>
+            that help your business grow.
+          </h1>
+          <p class="card__description">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+        </section>
+        <section class="card__stats-container">
+          <ul class="card__list">
+            <li class="card__list-item">
+              <span class="card__list-item--big">10k+</span> COMPANIES
+            </li>
+            <li class="card__list-item">
+              <span class="card__list-item--big">314</span> TEMPLATES
+            </li>
+            <li class="card__list-item">
+              <span class="card__list-item--big">12M+</span> QUERIES
+            </li>
+          </ul>
+        </section>
       </section>
     </main>
   </body>
